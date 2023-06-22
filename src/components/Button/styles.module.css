@@ -1,0 +1,19 @@
+.button{
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 1px solid #bababa9f;
+    background-color: #0015b5cb;
+    cursor: pointer;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.button:hover{
+
+    box-shadow: 0 0 5px 2px #202863 inset;
+}
+
+.button:active{
+
+    box-shadow: 0 0 10px 4px #141a40 inset;
+}

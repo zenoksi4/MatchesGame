@@ -1,0 +1,19 @@
+.inputWrapper{
+    width: 250px;
+    margin-top: 100px;
+    color: rgb(77, 75, 75);
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input {
+    text-align: center;
+    background: linear-gradient(180deg, rgba(58, 73, 188, 0.636) 0%, rgba(154, 165, 247, 0.25) 100%);
+
+}
+
+
+.input:focus{
+    background: linear-gradient(180deg, rgba(48, 72, 255, 0.712) 0%, rgba(126, 140, 248, 0.556) 100%);
+}

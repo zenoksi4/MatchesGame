@@ -1,9 +1,9 @@
 import { useState } from "react";
-import BackDropModal from "./components/BackDropModal";
-
 import Settings from "./components/SettingsButton";
 import ContentWrapper from "./components/ContentWrapper";
 import SettingsModal from "./components/SettingsModal";
+import MatchGame from "./components/MatchGame";
+import PlayerInput from "./components/PlayerInput";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,6 +19,10 @@ function App() {
   return (
     <ContentWrapper>
       <Settings openModal={openModal}/>
+
+      <MatchGame/>
+
+      <PlayerInput/>
       {isModalOpen && <SettingsModal closeModal={closeModal}/>}
     </ContentWrapper>
   );

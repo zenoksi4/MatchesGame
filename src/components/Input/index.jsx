@@ -17,6 +17,7 @@ const Input = ({
                 type={ type }
                 name={ name }
                 value={value}
+                min={1}
                 pattern={pattern}
                 placeholder={ placeholder }
                 onChange={ onChange }

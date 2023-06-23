@@ -1,6 +1,5 @@
 import ReactDom from "react-dom";
 import styles from './styles.module.css'
-import Button from "../Button";
 
 
 

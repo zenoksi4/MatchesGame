@@ -1,16 +1,14 @@
 import Button from "../Button";
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 
-function SettingsButton({openModal}) {
-
-
+function SettingsButton({ openModal }) {
   return (
     <>
-    <h1 className={styles.titleGame}>Matches Game</h1>
+      <h1 className={styles.titleGame}>Matches Game</h1>
 
-    <div className={styles.settingsButton}>
-      <Button onClick={openModal}>Settings</Button>
-    </div>
+      <div className={styles.settingsButton}>
+        <Button onClick={openModal}>Settings</Button>
+      </div>
     </>
   );
 }

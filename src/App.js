@@ -8,7 +8,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [numMatch, setNumMatch] = useState(12);
   const [maxTake, setMaxTake] = useState(3);
-  const [mod, setMod] = useState(true);
+  const [mod, setMod] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -18,21 +18,14 @@ function App() {
     setIsModalOpen(false);
   };
 
-
   return (
     <ContentWrapper>
-      <SettingsButton 
-        openModal={openModal}
-      />
+      <SettingsButton openModal={openModal} />
 
-      <MatchGame 
-        numMatch={numMatch}
-        mod={mod}
-        maxTake={maxTake}
-      />
+      <MatchGame numMatch={numMatch} mod={mod} maxTake={maxTake} />
 
-      {isModalOpen && 
-        <SettingsModal 
+      {isModalOpen && (
+        <SettingsModal
           closeModal={closeModal}
           numMatch={numMatch}
           setNumMatch={setNumMatch}
@@ -42,7 +35,7 @@ function App() {
           setMod={setMod}
           setIsModalOpen={setIsModalOpen}
         />
-      }
+      )}
     </ContentWrapper>
   );
 }

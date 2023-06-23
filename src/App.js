@@ -1,12 +1,14 @@
 import { useState } from "react";
-import Settings from "./components/SettingsButton";
+import SettingsButton from "./components/SettingsButton";
 import ContentWrapper from "./components/ContentWrapper";
 import SettingsModal from "./components/SettingsModal";
 import MatchGame from "./components/MatchGame";
-import PlayerInput from "./components/PlayerInput";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [numMatch, setNumMatch] = useState(12);
+  const [maxTake, setMaxTake] = useState(3);
+  const [mod, setMod] = useState(true);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -16,14 +18,31 @@ function App() {
     setIsModalOpen(false);
   };
 
+
   return (
     <ContentWrapper>
-      <Settings openModal={openModal}/>
+      <SettingsButton 
+        openModal={openModal}
+      />
 
-      <MatchGame/>
+      <MatchGame 
+        numMatch={numMatch}
+        mod={mod}
+        maxTake={maxTake}
+      />
 
-      <PlayerInput/>
-      {isModalOpen && <SettingsModal closeModal={closeModal}/>}
+      {isModalOpen && 
+        <SettingsModal 
+          closeModal={closeModal}
+          numMatch={numMatch}
+          setNumMatch={setNumMatch}
+          maxTake={maxTake}
+          setMaxTake={setMaxTake}
+          mod={mod}
+          setMod={setMod}
+          setIsModalOpen={setIsModalOpen}
+        />
+      }
     </ContentWrapper>
   );
 }

@@ -3,6 +3,7 @@ import styles from './styles.module.css'
 const Input = ({
     type = 'number',
     name = '',
+    max,
     className = '',
     classNameWrapper = '',
     placeholder = '',
@@ -18,6 +19,7 @@ const Input = ({
                 name={ name }
                 value={value}
                 min={1}
+                max={max}
                 pattern={pattern}
                 placeholder={ placeholder }
                 onChange={ onChange }

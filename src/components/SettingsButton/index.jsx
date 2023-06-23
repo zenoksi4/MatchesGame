@@ -1,7 +1,7 @@
 import Button from "../Button";
 import styles from './styles.module.css'
 
-function Settings({openModal}) {
+function SettingsButton({openModal}) {
 
 
   return (
@@ -15,4 +15,4 @@ function Settings({openModal}) {
   );
 }
 
-export default Settings;
+export default SettingsButton;
